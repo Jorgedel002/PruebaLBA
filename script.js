@@ -23,13 +23,8 @@ let active = true;
 
 //al clickear que se mueva el slider
 
-sliderNav.addEventListener("click", e => slideImage(e.target.id.slice(-1)));
-function xd(){
-    if(slideImage){
-        sliderNav.addEventListener("click", e => slideImage(e.target.id.slice(-1)));
-    }
+sliderNav.addEventListener("click", (e) => slideImage(e.target.id.slice(-1)));
 
-}
 
 //Dibujar slide y navegación
 for(let img in images){
@@ -55,13 +50,13 @@ function counter(){
     if(active){
         cont++;
         if(cont>=images.length) cont=0;
-        setInterval(slideImage(cont), 2000);
-        setInterval(setActive(cont), 2000);
+        setInterval(slideImage(cont), 4000);
+        setInterval(setActive(cont), 4000);
     }
 } 
 
 function slideImage(id){
-    if(!active && isNaN(id)){
+    if(!active && !isNaN(id)){
         cont = id;
         setActive(id);
     }
@@ -79,3 +74,12 @@ function setActive(id) {
 
 }
 
+//Eventos para saber si el ratón está sobre el slide
+sliderContainer.addEventListener("mouseover", ()=>{
+    if(active) active = false;
+});
+
+//Eventos para saber si el ratón no está sobre el slide
+sliderContainer.addEventListener("mouseout", ()=>{
+    if(!active) active = true;
+});

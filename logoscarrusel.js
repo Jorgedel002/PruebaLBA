@@ -1,39 +1,39 @@
 //logos carrusel
 
-/*let logos = ["ray ban.jpg", "logo-vulk (1).jpg","gucci-1 (1).jpg","Dior-logo (1).jpg"];
+let logos = ["ray ban.jpg", "logo-vulk (1).jpg","gucci-1 (1).jpg","Dior-logo (1).jpg"];
 
 let sliderLogos = document.getElementById("slider-logos-js");
 
-let sliderContainerLogos = document.getElementById("logos-carrusel");
+let sliderContainerLogos = document.getElementById("slider-logo");
 
-sliderLogos.style.width = logos.length * 100 + "%";
+sliderLogos.style.width = logos.length *100 + "%";
 
-let active = true;
+let activeLogo = true;
 
 for(let logoImg in logos){
 
-    slider.innerHTML += `<img src="${logos[logoImg]}" class="slider-logo" style="width: ${20/logos.length}%">`;
+    sliderLogos.innerHTML += `<img src="${logos[logoImg]}" class="slider__logos" style="width: ${40/logos.length}%">`;
 }
 
 let contador = 0;
 
-const startInterval = ()=> setInterval(counter, 4000);
+const startIntervalLogo = ()=> setIntervalLogo(counterLogo, 4000);
 
-startInterval();
+startIntervalLogo();
 
-function counter(){
-    if(active){
-        cont++;
+function counterLogo(){
+    if(activeLogo){
+        contador++;
         if(contador>=logos.length) contador=0;
-        setInterval(slideImage(contador), 2000);
-        setInterval(setActive(contador), 2000);
+        setIntervalLogo(slideImageLogo(contador), 2000);
+        setIntervalLogo(setActiveLogo(contador), 2000);
     }
 } 
 
-function slideImage(id){
-    if(!active && isNaN(id)){
-        cont = id;
-        setActiveCarrusel(id);
+function slideImageLogo(idLogos){
+    if(!activeLogo && isNaN(idLogos)){
+        contador = idLogos;
+        setActiveLogo(idLogos);
     }
-    slider.style.left = "-" + id + "00%";
-  }*/
+    sliderLogos.style.left = "-" + idLogos + "00%";
+  }

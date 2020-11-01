@@ -147,7 +147,7 @@ header{
     margin: auto;
     overflow: hidden;
     position: relative;
-    bottom: 205px;
+    bottom: 298px;
 }
 
 .slider__images{
@@ -183,6 +183,8 @@ header{
     margin: auto;
     overflow: hidden;
     position: relative;
+    bottom: 320px;
+    z-index: 500;
 }
 .slider__logos{
     position: relative;
