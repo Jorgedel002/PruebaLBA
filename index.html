@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <img src="logoLBA.png" alt="La boutique del anteojo" class="logo">
+            <div class="head">
+                <h1 class="title">La boutique del anteojo</h1>
+            </div>
+            <div class="logos-carrusel">
+                <section class="logo__slider" id="logo-slider-container">
+                    <div class="slider__logos" id="slider-logos-js"></div>
+                </section>
+            </div>
+            <div id="main-container">
+                <div id="hamburger">
+                    <button>
+                        <span class="top-line"></span>
+                        <span class="middle-line"></span>
+                        <span class="bottom-line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="carousel-container">
+        <section class="slider" id="slider-container">
+            <div class="slider__images" id="slider-js"></div>
+            <div class="slider__navigation" id="slider-navigation"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+    <script src="logoscarrusel.js"></script>
+</body>
+</html>
